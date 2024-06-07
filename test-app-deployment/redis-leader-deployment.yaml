@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-leader
-  namespace: redis
+  namespace: test-ns
   labels:
     app: redis
     role: leader
