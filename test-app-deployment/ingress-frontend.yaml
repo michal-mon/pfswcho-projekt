@@ -4,6 +4,7 @@ metadata:
   name: ingress-frontend
   namespace: test-ns
 spec:
+  ingressClassName: nginx
   rules:
   - host: projekt.lab
     http:
@@ -14,4 +15,4 @@ spec:
             port:
               number: 80
         path: /
-        pathType: Prefix
+        pathType: Exact
