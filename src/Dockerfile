@@ -7,6 +7,7 @@ RUN go build main.go
 
 FROM ubuntu:18.04
 
+RUN mkdir -p /app/public
 COPY --from=builder /go/main /app/guestbook
 COPY public/index.html /app/public/index.html
 COPY public/script.js /app/public/script.js
