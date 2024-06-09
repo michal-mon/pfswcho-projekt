@@ -61,7 +61,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           file: ${{ matrix.dockerfile }}
-          tags: latest
+          tags: michalmon/pfswcho-frontend:latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
