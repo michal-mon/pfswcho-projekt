@@ -3,8 +3,15 @@ kind: Ingress
 metadata:
   name: ingress-frontend
   namespace: test-ns
+  annotations:
+    cert-manager.io/cluster-issuer: "my-ca-issuer"
+
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - projekt.lab
+    secretName: projekt-lab-tls
   rules:
   - host: projekt.lab
     http:
